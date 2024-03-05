@@ -8,23 +8,41 @@ namespace ConsoleApp11
 {
     internal class User
     {
-        public string Name;
-        public int age;
-        public string pasword;
+        private string _Name;
+       private int _age;
+        private string _pasword;
 
-        public User(string name, int age, string pasword)
+
+         public string Username
         {
-            Console.WriteLine("ad daxil edin:");
-            Name = Convert.ToString(Console.ReadLine());
-            Console.WriteLine("yasinizi qeyd edin:");
-            this.age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("pasword daxil edin:");
-            this.pasword = Convert.ToString(Console.ReadLine());
+            get { return _Name; }
+            set { _Name = value; }
         }
-        public void info()
+        public int age
         {
-            Console.WriteLine($"Name:{this.Name},age:{this.age},pasword:{this.pasword}");
+            get { return _age; }  
+            set { _age = value; }
         }
+
+        public string _Pasword
+        {
+            get { return _pasword; }
+            set { _pasword = value; }
+        }
+
+        //public User(string name, int age, string pasword)
+        //{
+        //    Console.WriteLine("ad daxil edin:");
+        //    Name = Convert.ToString(Console.ReadLine());
+        //    Console.WriteLine("yasinizi qeyd edin:");
+        //    this.age = Convert.ToInt32(Console.ReadLine());
+        //    Console.WriteLine("pasword daxil edin:");
+        //    this.pasword = Convert.ToString(Console.ReadLine());
+        //}
+        //public void info()
+        //{
+        //    Console.WriteLine($"Name:{this.Name}age:{this.age},pasword:{this.pasword}");
+        //}
 
     }
 

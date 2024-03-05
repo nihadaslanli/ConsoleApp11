@@ -4,9 +4,18 @@
     {
         static void Main(string[] args)
         {
-            User user1 = new User("name",20,"pasword");
-            user1.info();
             
+            User user = new User();
+            Console.WriteLine("ad qeyd edin:");
+            user.Username = Console.ReadLine();
+            Console.WriteLine("yasini qeyd et:");
+            user.age=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("password yaz:");
+            user._Pasword = Console.ReadLine();
+
+
+            Console.WriteLine(user.Username+user.age+user._Pasword);
+
             
             
             
