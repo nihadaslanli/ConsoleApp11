@@ -21,7 +21,18 @@ namespace ConsoleApp11
         public int age
         {
             get { return _age; }
-            set { _age = value; }
+
+
+           
+            set {
+                if (value < 0)
+                {
+                    Console.WriteLine("Yasda - ola bilmez");
+
+                }
+
+
+                    _age = value; }
         }
 
         public string _Pasword
