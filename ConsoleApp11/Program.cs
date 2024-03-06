@@ -11,10 +11,10 @@
             Console.WriteLine("yasini qeyd et:");
             user.age=Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("password yaz:");
-            user._Pasword = Console.ReadLine();
+            user.Pasword = Console.ReadLine();
 
 
-            Console.WriteLine(user.Username+user.age+user._Pasword);
+            Console.WriteLine(user.Username+ user.age+ user.Pasword);
 
             
             
