@@ -9,19 +9,12 @@
             Console.WriteLine("ad qeyd edin:");
             user.Username = Console.ReadLine();
             Console.WriteLine("yasini qeyd et:");
-            user.age=Convert.ToInt32(Console.ReadLine());
+            user.Age=Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("password yaz:");
-            user.Pasword = Console.ReadLine();
+            user.Password = Console.ReadLine();
 
 
-            Console.WriteLine(user.Username+ user.age+ user.Pasword);
-
-            
-            
-            
+            Console.WriteLine($"username: {user.Username} userage:{user.Age}userpasword:{user.Password}");
         }
     }
-
-
-     
 }

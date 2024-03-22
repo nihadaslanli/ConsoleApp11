@@ -1,106 +1,86 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp11
+﻿namespace ConsoleApp11
 {
     internal class User
     {
-        private string _Name;
-        private int _age;
-        private string _pasword;
-
-
+        private string _UserName;
+        private int _Age;
+        private string _Password;
         public string Username
         {
             get
             {
-                return _Name;
+                return _UserName;
             }
+
+
             set
             {
-                _Name = value;
+                _UserName = value;
             }
         }
-        public int age
+        public int Age
         {
             get
             {
-                return _age;
+                return _Age;
             }
-
-
-
             set
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("Yasda - ola bilmez");
+                    Console.WriteLine(" yashda - Ola bilmez");
 
                 }
 
-
-                _age = value;
+                _Age = value;
             }
         }
 
-        public string Pasword
+        public string Password
         {
-            get
-            {
-                return Pasword;
-            }
+            get { return _Password; }
             set
             {
-                foreach (var item in _pasword)
+                if (value == null || value.Length == 0)
                 {
-                    if (value == null || value.Length < 8)
-                    {
-                        Console.WriteLine("Sifre bosh ola bilmez");
-                        return;
-                    }
-
-                    if (value.Length < 8)
-                    {
-                        Console.WriteLine("Sifre en 8 Karakter uzunluquda olamlidir");
-                        return;
-                    }
-
-                    bool hasUppercase = false;
-                    bool hasDigit = false;
-                    foreach (char c in value)
-                    {
-                        if (char.IsUpper(c))
-                        {
-                            hasUppercase = true;
-                        }
-                        else if (char.IsDigit(c))
-                        {
-                            hasDigit = true;
-                        }
-                    }
-
-                    if (!hasUppercase)
-                    {
-                        Console.WriteLine("Sifre en az bir boyuk reqem olmalidir");
-                        return;
-                    }
-
-                    if (!hasDigit)
-                    {
-                        Console.WriteLine("Sifre en az bir reqem olamlidir");
-                        return;
-                    }
-
-                    Pasword = value;
+                    Console.WriteLine("sifre bosh ola bilmez");
+                    return;
                 }
-               
 
-               
+                if (value.Length < 8)
+                {
+                    Console.WriteLine("sifre en az 8 simvol uzunluquda olamalidir");
+                    return;
+                }
+
+                bool hasUppercase = false;
+                bool hasDigit = false;
+
+                foreach (char c in value)
+                {
+                    if (char.IsUpper(c))
+                    {
+                        hasUppercase = true;
+                    }
+                    else if (char.IsDigit(c))
+                    {
+                        hasDigit = true;
+                    }
+                }
+
+                if (!hasUppercase)
+                {
+                    Console.WriteLine("sifre en az bir boyuk reqem olmalidir");
+                    return;
+                }
+
+                if (!hasDigit)
+                {
+                    Console.WriteLine("sifre en az bir reqem olmalidir");
+                    return;
+                }
+                Password = value;
             }
         }
-        
     }
 }
